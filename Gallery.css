@@ -1,0 +1,291 @@
+.body
+{
+  background-color: lightblue;
+}
+.navbar
+{
+  width: 100%;
+  /* position: absolute; */
+    font-weight: 600;
+}
+.navbar img
+{
+  margin-left: 20px;
+  height: 100%;
+}
+
+.button
+{
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.button::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.button::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.button::before,
+.button::after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+
+.button:hover::before,
+.button:hover::after {
+    transform: scaleX(1);
+}
+footer a
+{
+    text-decoration: none;
+}
+.banner
+{
+  background-image: url(Images/extra/g-banner.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  background-position: center;
+  /* position: relative; */
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-cotent
+{
+    height: 200px;
+    width: 100%;
+    /* border: 3px solid white; */
+}
+.btext
+{
+  /* position: absolute; */
+  text-align: center;
+  width: 100%;
+  min-height: 50vh;
+  background-color:  2px 2px 2px rgb(235, 231, 231);
+}
+.btext h1
+{
+  font-weight: 900;
+  font-size: 4rem;
+}
+.b-bot
+{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    /* border: 3px solid green; */
+}
+.b-bot a
+{
+    text-decoration: none;
+    color: rgb(11, 255, 11);
+}
+.b-bot a:hover
+{
+    height: auto;
+    width: auto;
+    padding: 0px 10px;
+    background-color: #0E21A0;
+    color: black;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+}
+.img-container
+{
+    height: auto;
+    width: 98%;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 30px;
+}
+.row
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.row .column
+{
+  flex: 25%;
+  width: auto;
+  overflow: hidden;
+  padding: 0px 4px;
+  height: 100%;
+}
+.images
+{
+  position: relative;
+}
+.images a img
+{
+  display: block;
+}
+.content
+{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.685);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+}
+.content:hover
+{
+  opacity: 1;
+  border-radius: 5%;
+  padding: 5px;
+}
+.content h4
+{
+  font-size: 20px;
+  color: #ffffff;
+}
+.content p
+{
+  margin: 10px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.content > *
+{
+  transform: translateY(25px);
+  transition: transform 0.6;
+}
+.content > *
+{
+  transform: translateY(0px);
+}
+.row .column img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  margin-top: 2%;
+  transition: all ease 1s;
+}
+a
+{
+    color: #ffffff;
+  text-decoration: none;
+}
+.question
+  {
+    /* width: 100%;
+    height: auto; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-content
+  {
+    margin: 0% 5%;
+  }
+  .question-button
+  {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 3px solid black; */
+  }
+  .question-button a
+  {
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px 40px; */
+    text-decoration: none;
+    background-color: #0E21A0;
+    border-radius: 10px;  
+    color: #ffffff;
+    margin: 20px;
+  }
+  .question-button div
+  {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: #0E21A0;
+    border-radius: 10px;
+  }
+  .question-button a:hover
+  {
+    color: #ffffff;
+  }
+ 
+footer p:hover
+{
+  color: #ffffff;
+  transition: 0s all ease;
+}
+@media (max-width: 768px)
+{
+  .banner 
+  {
+    min-height: 25vh;
+  }
+  .btext h1
+  {
+    font-size: 2rem;
+  }
+  .icons div p
+  {
+    font-size: 15px;
+  }
+  .question
+    {
+    display: block;
+    }
+  .row .column
+  {
+    flex: 50%;
+  }
+}
+@media (max-width: 460px)
+{
+  .row .column
+  {
+    flex: 100%;
+  }
+  .content h4
+  {
+  font-size: 10px;
+  color: #ffffff;
+  }
+.content p
+  {
+  font-size: 5px;
+  color: #ffffff;
+  }
+}

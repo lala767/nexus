@@ -1,0 +1,270 @@
+.body
+{
+    background-color: lightblue;
+}
+.navbar
+{
+  font-weight: 600;
+}
+
+.button
+{
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.button::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.button::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.button::before,
+.button::after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+
+.button:hover::before,
+.button:hover::after {
+    transform: scaleX(1);
+}
+.banner
+{
+  background-image: url(Images/events/killer-whale-497817_1280.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  background-position: center;
+  /* position: relative; */
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.banner-cotent
+{
+    height: 200px;
+    width: 100%;
+    /* border: 3px solid white; */
+}
+.btext
+{
+  /* position: absolute; */
+  text-align: center;
+  width: 100%;
+  min-height: 50vh;
+  background-color:  2px 2px 2px rgb(235, 231, 231);
+}
+.btext h1
+{
+  font-weight: 900;
+  font-size: 4rem;
+}
+.b-bot
+{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    /* border: 3px solid green; */
+}
+.b-bot a
+{
+    text-decoration: none;
+    color: rgb(11, 255, 11);
+}
+.b-bot a:hover
+{
+    height: auto;
+    width: auto;
+    padding: 0px 10px;
+    background-color: #0E21A0;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+}
+  .main
+  {
+    height: auto;
+    width: 98%;
+    margin: 10px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+  .mainc
+  {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactus
+  {
+    width: 97%;
+    height: auto;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    /* border: 5px solid black; */
+  }
+  .contact
+  {
+    height: 100%;
+    width: 60%;
+    padding: 20px 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 3px solid white;
+    background-color: lightblue;
+    text-align: center;
+  }
+  .row
+  {
+    display: flex;
+    justify-content: center;
+  }
+  .row div
+  {
+    margin: 15px 0px 0px 0px;
+  }
+  .contact-box
+  {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: lightblue;
+    color: #ffffff;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .contact button
+  {
+    height: 50px;
+    background-color: white;
+    color: lightblue;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .map-parent
+  {
+    height: 570px;
+    /* width: 20%; */
+    /* border: 3px solid green; */
+    border-radius: 20px;
+    /* padding: 20px 10px; */
+  }
+  .map
+  {
+    height: 100%;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+  .map iframe
+  {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .contact-detaile
+  {
+    margin-top: 20px;
+  }
+  .feedback
+  {
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    /* border: 5px solid black; */
+  }
+  .mainc-2
+  {
+    height: auto;
+    width: 100%;
+    padding: 20px 40px;
+  }
+  .row-2 
+  {
+    display: flex;
+  }
+  .row-2 h4
+  {
+    margin: 50px 0px 10px 0px;
+    color: rgb(85, 77, 77);
+  }
+  .row-2 p
+  {
+    /* margin-left: 50px; */
+    font-size: 15px;
+  }
+  footer a
+  {
+    text-decoration: none;
+  }
+
+  footer p:hover
+  {
+    color: #ffffff;
+    transition: 0s all ease;
+  }
+  @media (max-width: 768px)
+  {
+    .mainc-2
+    {
+      margin: 20px;
+      display: block;
+    }
+    .contactus
+    {
+        display: block;
+    }
+    .contact
+    {
+      width: 100%;
+    }
+    .map
+    {
+      width: 100%;
+      height: 100px;
+    }
+   .map-parent
+   {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+   }
+   .row-2
+   {
+    display: block;
+    margin: 20px;
+   }
+  }

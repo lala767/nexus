@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="1-removebg-preview.png">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>1st Event</title>
+    <link rel="stylesheet" href="Extra/lightbox.min.css">
+</head>
+<style>
+    body
+    {
+        background-color: lightblue;
+    }
+    .navbar
+  {
+    font-weight: 600;   
+  }
+
+  .button
+{
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.button::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.button::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.button::before,
+.button::after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+
+.button:hover::before,
+.button:hover::after {
+    transform: scaleX(1);
+}
+footer a
+{
+    text-decoration: none;
+}
+.banner
+{
+  background-image: url(Images/Location-images/killer\ whale4.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  background-position: center;
+  /* position: relative; */
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-cotent
+{
+    height: 200px;
+    width: 100%;
+    /* border: 3px solid white; */
+}
+.btext
+{
+  /* position: absolute; */
+  text-align: center;
+  width: 100%;
+  min-height: 50vh;
+  background-color:  2px 2px 2px rgb(235, 231, 231);
+}
+.btext h1
+{
+  font-weight: 900;
+  font-size: 4rem;
+}
+.b-bot
+{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    /* border: 3px solid green; */
+}
+.b-bot a
+{
+    text-decoration: none;
+    color: rgb(11, 255, 11);
+}
+.b-bot a:hover
+{
+    height: auto;
+    width: auto;
+    padding: 0px 10px;
+    background-color: #0E21A0;
+    color: black;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+}
+.main
+{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+.tital
+{
+    width: 100%;
+}
+.main .tital .content
+{
+    margin: 20px;
+    width: 98%;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: lightblue;
+}
+.content h1
+{
+    padding: 20px;
+}
+.main .tital .content h3
+{
+    padding: 20px;
+}
+.main .tital .content p
+{
+    padding: 20px;
+}
+ul
+{
+    list-style-type: none;
+}
+.main .tital .content li
+{
+  margin-bottom: 20px;
+}
+.img-container
+{
+    height: auto;
+    text-align: center;
+    width: 98%;
+    background-color:lightblue;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 30px;
+}
+.row
+{
+    justify-content: center;
+    /* padding: 10px; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.row .column
+{
+  flex: 25%;
+  width: auto;
+  overflow: hidden;
+  padding: 0px 4px;
+  height: 100%;
+}
+.images img
+{
+    width: 90%;
+    height: 90%;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+.images img:hover
+{
+  height: 100%;
+    width: 100%;
+    transition: 1s all ease;
+}
+.question
+  {
+    /* width: 100%;
+    height: auto; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-content
+  {
+    margin: 0% 5%;
+  }
+  .question-button
+  {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 3px solid black; */
+  }
+  .question-button a
+  {
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px 40px; */
+    text-decoration: none;
+    background-color: #0E21A0;
+    border-radius: 10px;  
+    color: #ffffff;
+    margin: 20px;
+  }
+  .question-button div
+  {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: #0E21A0;
+    border-radius: 10px;
+  }
+
+footer p:hover
+{
+  color: #ffffff;
+  transition: 0s all ease;
+}
+.images-tital
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+@media (max-width: 760px)
+{
+    .question
+    {
+    display: block;
+    }
+    .tital
+    {
+        width: 95%;
+    }
+    .image
+    {
+        display: none;
+    }
+    .images img
+    {
+      width: 100%;
+    }
+    .row .column
+  {
+    flex: 50%;
+  }
+}
+</style>
+<body >
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="height: 80px;" href="index.html"><img src="1-removebg-preview.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto animate__animated animate__lightSpeedInLeft animate__delay-1s">
+          <li class="nav-item">
+            <a class="nav-link button " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link button" aria-current="page" href="Gallary.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link button" aria-current="page" href="AboutUs.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link button" aria-current="page" href="ContactUs.html">Contact  US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active button" aria-current="page" href="Events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link button" aria-current="page" href="OnlineBooking.html">Online Booking</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+
+    <div class="banner" >
+        <div class="banner-cotent">
+          <div class="btext">
+            <h1>Killer Whale Events</h1>
+            <div class="b-bot">
+              <a href="index.html">
+                <h4>Home</h4>
+              </a>
+              <h3>/</h3>
+              <a href="Events.html">
+                <h4>Events</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="tital">
+            <div class="content col-lg-12 col-md-12 col-sm-12">
+                <h1>Tital : Killer Whale Event.</h1>
+                <h3>Details</h3>
+                <p>Aquarium killer whale shows, also known as orca shows, have been a source of controversy and debate for many years. These shows typically take place in marine mammal theme parks and aquariums, where trained killer whales, also known as orcas, perform a variety of tricks and stunts in front of a live audience. While these shows have entertained and educated the public for decades, they have also faced criticism and ethical conc Proponents of killer whale shows argue that they serve as a platform for educating the public about these magnificent creatures, promoting conservation effand providing visitors with a unique and unforgettable experience. These shows often include demonstrations of orcas' incredible agility, intelligence, and ability to work with human trainers.  However, there are several key ethical and welfare issues associated with keeping killer whales in captivity and using them in shows:  Health and Welfare Concerns: Orcas in captivity may suffer from various health problems, including stress, dental issues, and reduced life expectancy compartheir wild counterparts. The confinement and artificial environments can lead to physical and psychological distress.  Natural Behavior: Captive orcas are deprived of their natural behaviors, such as hunting, socializing, and traveling long distances in the wild. This confincan lead to boredom and frustration.  Training and Performance: Some critics argue that the training methods used in killer whale shows, such as food deprivation and social isolation, raise etconcerns. They claim that the shows prioritize entertainment over animal welfare.  Safety Concerns: There have been incidents of trainers and staff being injured or killed by captive killer whales, which raises concerns about the safehumans involved in these shows.  Conservation vs. Exploitation: Some argue that the conservation message promoted in these shows is merely a facade for profit, and that the captivity of animals primarily serves commercial interests. In response to growing public concern and regulatory changes, some marine parks have phased out or significantly modified their killer whale shows. For exaSeaWorld announced that it would no longer breed or acquire orcas, and it shifted its focus to educational and naturalistic presentations.The debate over aqukiller whale shows continues to evolve, reflecting society's changing attitudes toward the ethics of keeping marine mammals in captivity for entertainment. these shows have played a role in inspiring people to care for and protect marine life, the ongoing discussion highlights the importance of striking a babetween education, conservation, and the well-being of the animals involved. User
+                    in </p>
+                <ul>
+                    <h5>Timing</h5>
+                    <li>9am  to  3pm</li>
+                    <h5>Days</h5>
+                    <li>Wednesday, Friday.</li>
+                    <h5>Category</h5>
+                    <li>For Everyone</li>
+                </ul>
+            </div>
+        </div>
+        <div class="images-tital">
+            <h1>Images</h1>
+        </div>
+        <div class="img-container">
+            <div class="container-fluid ms-2 mt-3">
+              <div class="row">
+                <div class="column">
+                  <div class="images">
+                    <img src="Images/Location-images/killer whale1.jpg" >
+                  </div>
+                </div> 
+                <div class="column">
+                  <div class="images">
+                    <img src="Images/Location-images/killer whale5.jpg">
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="images">
+                    <img src="Images/Location-images/killer whale3.jpg"  >
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="images">
+                    <img src="Images/Location-images/killer whale2.jpg" ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-content col-lg-7 col-md-6 col-sm-12">
+              <h2>Have any Questions?</h2>
+              <p>Get answers in our help Center or connect with Customer Support.</p>
+            </div>
+            <div class="question-button">
+              <a href="AboutUs.html">
+                <div>Get Answer</div>
+              </a>
+              <br>
+              <a href="ContactUs.html">
+                <div>Contact Us</div>
+              </a>
+            </div>
+           </div>
+    </div>
+    
+    
+
+    <!-- Footer -->
+
+<footer class="text-center text-lg-start bg-dark text-muted pt-2 mt-4">
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold ">
+            <img src="1-removebg-preview.png" style="width: 90%; margin-top: 0px;">
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset button">Home</a>
+          </p>
+          <p>
+            <a href="Gallary.html" class="text-reset button">Gallery</a>
+          </p>
+          <p>
+            <a href="ContactUs.html" class="text-reset button">Contact Us</a>
+          </p>
+          <p>
+            <a href="OnlineBooking.html" class="text-reset button">Onilne Booking</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Social Media Links
+          </h6>
+          <p>
+            <a href="https://www.instagram.com/accounts/login/" class="text-reset button"><i class="fa-brands fa-instagram" ></i> Instagram</a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjk3NzQwMDI0LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D" class="text-reset "><i class="fa-brands fa-facebook " ></i> Facebook</a>
+          </p>
+          <p>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="text-reset"><i class="fa-brands fa-twitter"></i> Twiter</a>
+          </p>
+          <p>
+            <a href="https://www.google.com/" class="text-reset"><i class="fa-brands fa-google"></i> Google</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Washington, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            Aptech@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Nexus Aquarium:
+    <a class="text-reset fw-bold" href="index.html">NexusAquarium.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- Footer -->
+          
+      </body>
+      <script src="Extra/lightbox-plus-jquery.min.js"></script>
+      <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+      </html>
